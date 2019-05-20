@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阿里云域名更换证书 | 蝉鸣的夏季</title>
+  <title>onos&amp;mininet基于SDN模拟ip+光安装指北 | 蝉鸣的夏季</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于小程序需要https接口，所以去年申请了阿里云的ssl免费证书，年底快到期了，免费不能续费只能重新申请一个。">
-<meta name="keywords" content="服务器,证书">
+  <meta name="description" content="onos mininet 真挺坑的，国内研究人很少，相关文档基本靠墙外，记录下过程吧">
+<meta name="keywords" content="onos mininet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阿里云域名更换证书">
-<meta property="og:url" content="http://yoursite.com/2018/12/19/阿里云域名更换证书/index.html">
+<meta property="og:title" content="onos&amp;mininet基于SDN模拟ip+光安装指北">
+<meta property="og:url" content="http://yoursite.com/2019/05/20/onos-mininet基于SDN模拟ip-光安装指北/index.html">
 <meta property="og:site_name" content="蝉鸣的夏季">
-<meta property="og:description" content="由于小程序需要https接口，所以去年申请了阿里云的ssl免费证书，年底快到期了，免费不能续费只能重新申请一个。">
-<meta property="og:image" content="https://i.loli.net/2018/12/19/5c19df2e6c6d9.png">
-<meta property="og:updated_time" content="2019-05-10T01:50:10.000Z">
+<meta property="og:description" content="onos mininet 真挺坑的，国内研究人很少，相关文档基本靠墙外，记录下过程吧">
+<meta property="og:updated_time" content="2019-05-20T03:05:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿里云域名更换证书">
-<meta name="twitter:description" content="由于小程序需要https接口，所以去年申请了阿里云的ssl免费证书，年底快到期了，免费不能续费只能重新申请一个。">
-<meta name="twitter:image" content="https://i.loli.net/2018/12/19/5c19df2e6c6d9.png">
+<meta name="twitter:title" content="onos&amp;mininet基于SDN模拟ip+光安装指北">
+<meta name="twitter:description" content="onos mininet 真挺坑的，国内研究人很少，相关文档基本靠墙外，记录下过程吧">
   
     <link rel="alternative" href="/atom.xml" title="蝉鸣的夏季" type="application/atom+xml">
   
@@ -160,45 +158,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-阿里云域名更换证书" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-onos-mininet基于SDN模拟ip-光安装指北" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      阿里云域名更换证书
+      onos&amp;mininet基于SDN模拟ip+光安装指北
     </h1>
   
 
         
-        <a href="/2018/12/19/阿里云域名更换证书/" class="archive-article-date">
-  	<time datetime="2018-12-19T05:51:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-19</time>
+        <a href="/2019/05/20/onos-mininet基于SDN模拟ip-光安装指北/" class="archive-article-date">
+  	<time datetime="2019-05-20T02:39:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://i.loli.net/2018/12/19/5c19df2e6c6d9.png" width="40%" height="40%"></p>
-<p>由于小程序需要https接口，所以去年申请了阿里云的ssl免费证书，年底快到期了，免费不能续费只能重新申请一个。</p>
-<a id="more"></a>
-<blockquote>
-<p> 不得不说，阿里云免费证书藏得真够深的</p>
+        <blockquote>
+<p>onos mininet 真挺坑的，国内研究人很少，相关文档基本靠墙外，记录下过程吧</p>
 </blockquote>
+<a id="more"></a>
+<h3 id="1-onos安装"><a href="#1-onos安装" class="headerlink" title="1.onos安装"></a>1.onos安装</h3><blockquote>
+<p>基于1.9.0安装onos</p>
 <ol>
-<li>购买免费证书</li>
-<li>验证dns，域名下面解析证书指定的配置</li>
-<li>等待审批</li>
-<li>下载证书，我服务器用的nginx转发所以只要配置下nginx的就好了</li>
+<li>onos github下载源码，切换1.9.0分支</li>
+<li>设置环境变量，修改 <code>tools/dev/bash_profile</code> 中各项配置，系统变量<code>.profile</code>中加入如下</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#小程序https</span><br><span class="line">server &#123;</span><br><span class="line"></span><br><span class="line">        listen 443;</span><br><span class="line">        server_name xxxx; #填写绑定证书的域名</span><br><span class="line">        ssl on;</span><br><span class="line">        ssl_certificate cert/xxxxx; #填写绑定证书的文件路径 pem</span><br><span class="line">        ssl_certificate_key cert/xxxxx;#填写绑定证书的文件路径 key</span><br><span class="line">        ssl_session_timeout 5m;</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">        location / &#123;</span><br><span class="line">               proxy_pass http://localhost:8080; </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">source ~/documents/work/onos/tools/dev/bash_profile #刚刚下载onos目录</span><br><span class="line">export ONOS_APPS=&quot;drivers,drivers.optical,openflow,proxyarp,optical,onos-jsptpd-sdn&quot; #onos-jsptpd-sdn为另外开发app</span><br><span class="line">export PATH=&quot;$PATH:$HOME/bin&quot;</span><br></pre></td></tr></table></figure>
 <ol>
-<li>遇到一个小坑，新买的服务器443端口没开，导致访问不了，安全组配置下就好了</li>
+<li>项目目录中运行 <code>ok</code> ,此时会下载buck并打包运行项目，会比较慢，一定要挂梯子</li>
+<li><code>op</code>打包命令，<code>ok clean debug</code>会开启远程端口，配合idea可以实现调试</li>
 </ol>
-<ol>
-<li>打完收工，打开浏览器可以看到已经网站前面的小绿锁拉</li>
-</ol>
+<h3 id="2-mininet安装"><a href="#2-mininet安装" class="headerlink" title="2.mininet安装"></a>2.mininet安装</h3><blockquote>
+<p>onos 官网教程</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd</span><br><span class="line">git clone git://github.com/mininet/mininet</span><br><span class="line">cd mininet</span><br><span class="line">wget &apos;https://wiki.onosproject.org/download/attachments/4164175/multi_controller.patch?version=1&amp;modificationDate=1443649770762&amp;api=v2&apos; -O multi_controller.patch</span><br><span class="line">git apply multi_controller.patch</span><br><span class="line">sudo ./util/install.sh -3fnv</span><br><span class="line"># role back CPqD to a version known to work</span><br><span class="line">cd</span><br><span class="line">cd ~/ofsoftswitch13/</span><br><span class="line">make clean</span><br><span class="line">git reset --hard 8d3df820f7487f541b3f5862081a939aad76d8b5</span><br><span class="line">sudo make install</span><br><span class="line">cd</span><br><span class="line">sudo mn --test pingall # this should work</span><br></pre></td></tr></table></figure>
+<h3 id="3-linc-oe安装"><a href="#3-linc-oe安装" class="headerlink" title="3.linc-oe安装"></a>3.linc-oe安装</h3><blockquote>
+<p>模拟光网络</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd</span><br><span class="line">git clone git://github.com/mininet/mininet</span><br><span class="line">cd mininet</span><br><span class="line">wget &apos;https://wiki.onosproject.org/download/attachments/4164175/multi_controller.patch?version=1&amp;modificationDate=1443649770762&amp;api=v2&apos; -O multi_controller.patch</span><br><span class="line">git apply multi_controller.patch</span><br><span class="line">sudo ./util/install.sh -3fnv</span><br><span class="line"># role back CPqD to a version known to work</span><br><span class="line">cd</span><br><span class="line">cd ~/ofsoftswitch13/</span><br><span class="line">make clean</span><br><span class="line">git reset --hard 8d3df820f7487f541b3f5862081a939aad76d8b5</span><br><span class="line">sudo make install</span><br><span class="line">cd</span><br><span class="line">sudo mn --test pingall # this should work</span><br></pre></td></tr></table></figure>
+<h3 id="4-新建拓扑推送到onos"><a href="#4-新建拓扑推送到onos" class="headerlink" title="4.新建拓扑推送到onos"></a>4.新建拓扑推送到onos</h3><blockquote>
+<p>mininet安装补丁后可以推送多个onos主机，实现集群<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -E python onos/tools/test/topos/opticalTestBig.py $OC1 $OC2 $OC3</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="5-实现rest接口操作mininet"><a href="#5-实现rest接口操作mininet" class="headerlink" title="5.实现rest接口操作mininet"></a>5.实现rest接口操作mininet</h3><p>github上找到一个项目<br><a href="https://github.com/chen2gou/mininetRest" target="_blank" rel="noopener">mininetrest</a>，二次开发了下，实现操作link，启动mininet的时候会启动一个web服务器监听请求操作mininet</p>
+<p>参考文档</p>
+<p><a href="https://blog.csdn.net/weixin_33767813/article/details/87511872" target="_blank" rel="noopener">使用buck安装ONOS</a></p>
+<p><a href="https://wiki.onosproject.org/display/ONOS/The+Packet+Optical+Dev+Environment" target="_blank" rel="noopener">onos ip+光环境配置</a></p>
 
       
 
@@ -212,11 +222,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">证书</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">onos mininet</a>
         		</li>
       		
 		</ul>
@@ -272,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/19/阿里云域名更换证书/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/20/onos-mininet基于SDN模拟ip-光安装指北/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +292,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/21/JavaMail排雷指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaMail排雷指南
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/04/linux-开启ssh掉坑/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">linux 开启ssh掉坑</div>
+    <a href="/2019/05/10/java8特性学习1：Lamda表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java8特性学习1：Lamda表达式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -327,7 +324,7 @@
   
 
   
-  <div id="SOHUCS" sid="阿里云域名更换证书" ></div> 
+  <div id="SOHUCS" sid="onos-mininet基于SDN模拟ip-光安装指北" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
