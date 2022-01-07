@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>2018年中学习计划 | 蝉鸣的夏季</title>
+  <title>freemarker+itext实现超级简历pdf | 蝉鸣的夏季</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2018上半年，有惊喜有收获也有失去以及落寞。  总结一哈 内容：工作空余学习了angular，vue，小程序开发框架，结合自己的想法做了咩咩集市H5（angular）以及后台（vue），后面基于h5项目重构了咩咩集市小程序端，以及目前的江北好阿姨项目的持续开发。  收获：发现之前写的一些代码都很大优化空间,写前端逻辑代码对于后台思维也有帮助,公司不是前后端分离，作为java开发经常要前端来一手">
+  <meta name="description" content="思路：尝试实现超级简历的pdf样式，分析是通过html模板结合freemarker占位循环，配合itext3支持css3高级特性渲染富文本生成pdf。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018年中学习计划">
-<meta property="og:url" content="http://yoursite.com/2018/07/10/2018年中学习计划/index.html">
+<meta property="og:title" content="freemarker+itext实现超级简历pdf">
+<meta property="og:url" content="http://yoursite.com/2022/01/07/freemarker+itext实现超级简历pdf/index.html">
 <meta property="og:site_name" content="蝉鸣的夏季">
-<meta property="og:description" content="2018上半年，有惊喜有收获也有失去以及落寞。  总结一哈 内容：工作空余学习了angular，vue，小程序开发框架，结合自己的想法做了咩咩集市H5（angular）以及后台（vue），后面基于h5项目重构了咩咩集市小程序端，以及目前的江北好阿姨项目的持续开发。  收获：发现之前写的一些代码都很大优化空间,写前端逻辑代码对于后台思维也有帮助,公司不是前后端分离，作为java开发经常要前端来一手">
-<meta property="og:updated_time" content="2019-05-10T01:50:10.000Z">
+<meta property="og:description" content="思路：尝试实现超级简历的pdf样式，分析是通过html模板结合freemarker占位循环，配合itext3支持css3高级特性渲染富文本生成pdf。">
+<meta property="og:image" content="http://img.achiguo.com/blog/2091641521649_.pic.jpg">
+<meta property="og:updated_time" content="2022-01-07T02:27:02.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018年中学习计划">
-<meta name="twitter:description" content="2018上半年，有惊喜有收获也有失去以及落寞。  总结一哈 内容：工作空余学习了angular，vue，小程序开发框架，结合自己的想法做了咩咩集市H5（angular）以及后台（vue），后面基于h5项目重构了咩咩集市小程序端，以及目前的江北好阿姨项目的持续开发。  收获：发现之前写的一些代码都很大优化空间,写前端逻辑代码对于后台思维也有帮助,公司不是前后端分离，作为java开发经常要前端来一手">
+<meta name="twitter:title" content="freemarker+itext实现超级简历pdf">
+<meta name="twitter:description" content="思路：尝试实现超级简历的pdf样式，分析是通过html模板结合freemarker占位循环，配合itext3支持css3高级特性渲染富文本生成pdf。">
+<meta name="twitter:image" content="http://img.achiguo.com/blog/2091641521649_.pic.jpg">
   
     <link rel="alternative" href="/atom.xml" title="蝉鸣的夏季" type="application/atom+xml">
   
@@ -157,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018年中学习计划" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-freemarker+itext实现超级简历pdf" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      2018年中学习计划
+      freemarker+itext实现超级简历pdf
     </h1>
   
 
         
-        <a href="/2018/07/10/2018年中学习计划/" class="archive-article-date">
-  	<time datetime="2018-07-10T05:27:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
+        <a href="/2022/01/07/freemarker+itext实现超级简历pdf/" class="archive-article-date">
+  	<time datetime="2022-01-07T01:56:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-07</time>
 </a>
         
       </header>
@@ -178,25 +180,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>2018上半年，有惊喜有收获也有失去以及落寞。</p>
+<p>思路：尝试实现超级简历的pdf样式，分析是通过html模板结合freemarker占位循环，配合itext3支持css3高级特性渲染富文本生成pdf。</p>
 </blockquote>
-<h2 id="总结一哈"><a href="#总结一哈" class="headerlink" title="总结一哈"></a>总结一哈</h2><ul>
-<li><p>内容：工作空余学习了angular，vue，小程序开发框架，结合自己的想法做了咩咩集市H5（angular）以及后台（vue），后面基于h5项目重构了咩咩集市小程序端，以及目前的江北好阿姨项目的持续开发。</p>
-</li>
-<li><p>收获：发现之前写的一些代码都很大优化空间,写前端逻辑代码对于后台思维也有帮助,公司不是前后端分离，作为java开发经常要前端来一手，有时候都恨这愚蠢的模式。目前把前后台交互摸得也算一清二楚，前端到后台，再到前端打包扔到nginx，后台扔到tomcat服务器都算得心应手。</p>
-</li>
-</ul>
-<h2 id="展望一下下半年"><a href="#展望一下下半年" class="headerlink" title="展望一下下半年"></a>展望一下下半年</h2><ul>
-<li><p>后台技术重点研究下微服务（SpringCloud或者Dubbo）以及对于多线程高并发的了解程度</p>
-</li>
-<li><p>前端学习下React，发现越来越多的大厂都在使用React，特别是阿里对其情有独钟，今天刚看到京东也出了一个基于React的小程序框架<em>Taro</em></p>
-</li>
-<li><p>上线江北好阿姨小程序，持续迭代</p>
-</li>
-</ul>
-<blockquote>
-<p>最后，生活安逸不应该成为我们停滞不前的借口。生命不止，奋斗不息，与君共勉。</p>
-</blockquote>
+<a id="more"></a>
+<h3 id="1-设计html模板，关键词部分用freemarker标签占位处理"><a href="#1-设计html模板，关键词部分用freemarker标签占位处理" class="headerlink" title="1.设计html模板，关键词部分用freemarker标签占位处理"></a>1.设计html模板，关键词部分用freemarker标签占位处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">       // 样式省略</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div id=&quot;head&quot; class=&quot;space&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;title center&quot;&gt;</span><br><span class="line">        $&#123;username&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">        $&#123;phone&#125; 丨$&#123;email&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">        $&#123;address&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">        $&#123;homepage&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">        $&#123;birthday?string(&apos;yyyy-MM-dd&apos;)&#125; 丨$&#123;gender&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">         $&#123;currentJob&#125; 丨$&#123;expJob&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;#if skill?? &amp;&amp;skill!=&apos;&apos;&gt;</span><br><span class="line">    &lt;div class=&quot;small-title&quot;&gt;专业技能&lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div class=&quot;content space&quot;&gt;</span><br><span class="line">        $&#123;skill&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line">&lt;#if works?? &amp;&amp; (works?size &gt; 0)&gt;</span><br><span class="line">    &lt;div class=&quot;small-title&quot;&gt;工作经历&lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div class=&quot;content space&quot;&gt;</span><br><span class="line">        &lt;#list works as t&gt;</span><br><span class="line"></span><br><span class="line">            &lt;p class=&quot;left company&quot;&gt;$&#123;t.company&#125;&lt;/p&gt;</span><br><span class="line">            &lt;p class=&quot;right&quot;&gt;$&#123;t.startAt&#125; - $&#123;t.endAt&#125;&lt;/p&gt;</span><br><span class="line">            &lt;p class=&quot;clear&quot;&gt;&lt;/p&gt;</span><br><span class="line">            &lt;p&gt;$&#123;t.dept&#125; |$&#123;t.job&#125;&lt;/p&gt;</span><br><span class="line">            $&#123;t.description&#125;</span><br><span class="line"></span><br><span class="line">        &lt;/#list&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line">&lt;#if edus?? &amp;&amp; (edus?size &gt; 0)&gt;</span><br><span class="line">    &lt;div class=&quot;small-title&quot;&gt;教育经历&lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div class=&quot;content space&quot;&gt;</span><br><span class="line">        &lt;#list edus as t&gt;</span><br><span class="line"></span><br><span class="line">            &lt;p class=&quot;left company&quot;&gt;$&#123;t.university&#125;&lt;/p&gt;</span><br><span class="line">            &lt;p class=&quot;right&quot;&gt;$&#123;t.startAt?string(&apos;yyyy-MM&apos;)&#125; - $&#123;t.endAt?string(&apos;yyyy-MM&apos;)&#125;&lt;/p&gt;</span><br><span class="line">            &lt;p class=&quot;clear&quot;&gt;&lt;/p&gt;</span><br><span class="line">            &lt;p&gt;$&#123;t.major&#125; |$&#123;t.degree&#125;&lt;/p&gt;</span><br><span class="line">            $&#123;t.description&#125;</span><br><span class="line"></span><br><span class="line">        &lt;/#list&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line">&lt;#if summary?? &amp;&amp;summary!=&apos;&apos;&gt;</span><br><span class="line">    &lt;div class=&quot;small-title&quot;&gt;个人总结&lt;/div&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">    &lt;div class=&quot;content space&quot;&gt;</span><br><span class="line">        $&#123;summary&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/#if&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-freemarker渲染html"><a href="#2-freemarker渲染html" class="headerlink" title="2.freemarker渲染html"></a>2.freemarker渲染html</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 获取模板,并设置编码方式</span><br><span class="line">Template template = freemarkerCfg.getTemplate(htmlTmp);</span><br><span class="line">template.setEncoding(&quot;UTF-8&quot;);</span><br><span class="line">// 合并数据模型与模板</span><br><span class="line">template.process(data, out); //将合并后的数据和模板写入到流中，这里使用的字符流</span><br><span class="line">out.flush();</span><br><span class="line">createPdf(out.toString(),outputStream);</span><br></pre></td></tr></table></figure>
+<h3 id="3-itext生成pdf"><a href="#3-itext生成pdf" class="headerlink" title="3.itext生成pdf"></a>3.itext生成pdf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//css3高级特性支持</span><br><span class="line">ITextRenderer render = new ITextRenderer();</span><br><span class="line">ITextFontResolver fontResolver = render.getFontResolver();</span><br><span class="line">fontResolver.addFont(FONT, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);</span><br><span class="line">// 解析html生成pdf</span><br><span class="line">render.setDocumentFromString(content);</span><br><span class="line">render.layout();</span><br><span class="line">render.createPDF(outputStream);</span><br></pre></td></tr></table></figure>
+<h3 id="4-前端接收文件流展示"><a href="#4-前端接收文件流展示" class="headerlink" title="4.前端接收文件流展示"></a>4.前端接收文件流展示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">response.setHeader(&quot;Content-Type&quot;, &quot;application/pdf &quot;);</span><br><span class="line">response.setContentType(&quot;application/pdf ;charset=utf-8&quot;);</span><br><span class="line">//不加👇就直接预览</span><br><span class="line">response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot; + URLEncoder.encode(&quot;test.pdf&quot;, &quot;UTF-8&quot;));</span><br></pre></td></tr></table></figure>
+<p>我这里是通过小程序展示</p>
+<p><img src="http://img.achiguo.com/blog/2091641521649_.pic.jpg" alt="image"></p>
 
       
 
@@ -255,7 +247,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/10/2018年中学习计划/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/01/07/freemarker+itext实现超级简历pdf/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +261,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/12/04/linux-开启ssh掉坑/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          linux 开启ssh掉坑
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/11/小程序从入门到放弃-第一回/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序从入门到放弃 第一回</div>
+    <a href="/2021/04/29/freemarker导出富文本到word/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">freemarker导出富文本到word</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -310,7 +293,7 @@
   
 
   
-  <div id="SOHUCS" sid="2018年中学习计划" ></div> 
+  <div id="SOHUCS" sid="freemarker+itext实现超级简历pdf" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
